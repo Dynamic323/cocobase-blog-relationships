@@ -2,21 +2,9 @@ process.env.NODE_OPTIONS = "--dns-result-order=ipv4first";
 import { Cocobase } from "cocobase";
 
 const db = new Cocobase({
-  apiKey: "pC54pBPazisjfntxDZlXX7tNWWYCgYBXXnO0YbZn",
-  projectId: "e49532d8-504b-4bae-99cb-cba8858cdc1a",
+  apiKey: "",
+  projectId: "",
 });
-
-const retry = async (fn, retries = 3, delay = 2000) => {
-  for (let i = 0; i < retries; i++) {
-    try {
-      return await fn();
-    } catch (error) {
-      if (i === retries - 1) throw error;
-      console.log(`Retrying... (${i + 1}/${retries})`);
-      await new Promise((r) => setTimeout(r, delay));
-    }
-  }
-};
 
 /**
  * ============================================================================
@@ -37,14 +25,7 @@ const retry = async (fn, retries = 3, delay = 2000) => {
 // ============================================================================
 // 2. USER OPERATIONS
 // ============================================================================
-async function Createuser(email, psw, age, gender) {
-  const user = await db.auth.register(email, psw, {
-    age,
-    gender,
-  });
-
-  return console.log(user);
-}
+async function Createuser(email, psw, age, gender) {}
 
 // Fetch a single user by their ID
 async function getUserById(userId) {
