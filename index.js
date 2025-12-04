@@ -9,6 +9,7 @@ const db = new Cocobase({
 /**
  * ============================================================================
  * COCOBASE BLOG APPLICATION - RELATIONSHIPS TUTORIAL
+ * Master Blog Relationships: Users, Posts & Comments with Cocobase 🔥 (No Backend Skills Needed!)
  * ============================================================================
  *
  * Project: Blog System demonstrating database relationships in Cocobase
