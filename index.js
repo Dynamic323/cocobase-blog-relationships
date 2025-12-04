@@ -1,7 +1,6 @@
 process.env.NODE_OPTIONS = "--dns-result-order=ipv4first";
 import { Cocobase } from "cocobase";
 
-// Get your apikey and projectID from  https://cocobase.buzz/
 const db = new Cocobase({
   apiKey: "",
   projectId: "",
@@ -14,35 +13,27 @@ const db = new Cocobase({
  *
  * Project: Blog System demonstrating database relationships in Cocobase
  * Purpose: Learn how to handle One-to-Many, Many-to-One relationships
- *
- * What You'll Learn:
+
+* What You'll Learn:
  * - Connecting to Cocobase (modern BaaS at https://cocobase.buzz)
- * - Document structure and primary keys
  * - CRUD operations (Create, Read, Update, Delete)
  * - Populate/JOIN queries to fetch related data
  * - Filtering and searching documents
- *
+ 
  * Relationships Covered:
  * - User → Posts (One-to-Many: One user has many posts)
  * - Post → User (Many-to-One: Many posts belong to one user)
  * - Post → Comments (One-to-Many: One post has many comments)
- *
+ 
  * Collections:
  * - appuser (Cocobase built-in authentication users)
  * - post (title, content, author_id)
  * - comment (post_id, comment, user_id)
- *
+ 
  * Focus on backend logic - these functions work in ANY framework
  * (React, Next.js, Vue, vanilla HTML/JS, etc.)
  * ============================================================================
  */
-
-// ============================================================================
-// 1. DATABASE CONNECTION & SETUP
-// ============================================================================
-
-// Already connected! Cocobase instance is ready at https://cocobase.buzz
-// Collections: appuser, post, comment
 
 // ============================================================================
 // 2. USER OPERATIONS
