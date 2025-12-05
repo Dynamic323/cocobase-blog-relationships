@@ -75,27 +75,7 @@ async function getCommentsForPost(postId) {
   // TODO: Return comments array with embedded post/user data
 }
 
-// Fetch a post with ALL its comments
-async function getPostWithComments(postId) {
-  // TODO: Returns all comments that belong to this post
-}
 
-// ============================================================================
-// 5. ADVANCED QUERIES
-// ============================================================================
-
-// Get the most recent posts with limit
-async function getRecentPosts(limit) {}
-
-// Search posts by keyword in title
-async function searchPosts(keyword) {
-  // TODO: Return matching posts
-}
-
-// Count total posts per author
-async function getPostStats() {
-  // TODO: Return statistics object
-}
 
 // ============================================================================
 // MAIN EXECUTION (for testing)
@@ -121,10 +101,6 @@ async function main() {
     // await getCommentsForPost("post-id");
     // await getPostWithComments("post-id");
 
-    // 5. Test advanced queries
-    // await getRecentPosts(5);
-    // await searchPosts("first");
-    // await getPostStats();
   } catch (error) {
     console.error("Error:", error);
   }
